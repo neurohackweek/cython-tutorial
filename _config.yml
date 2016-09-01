@@ -9,11 +9,11 @@ kind: "lesson"
 title: "Cython and Numba"
 
 # Repository URL (without trailing slash).
-repo: https://github.com/neurohackweek/cython
+repo: https://github.com/neurohackweek/cython-tutorial
 
 # Root URL below username.github.io domain, with leading slash but no trailing slash.
 # For example, for 'https://neurohackweek.github.io/lesson-example', use '/lesson-example'.
-root: "/cython"
+root: "/cython-tutorial"
 
 # Contact email address.
 email: arokem@uw.edu
