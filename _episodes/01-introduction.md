@@ -49,15 +49,15 @@ conda install cython
 ### A first example - why use Cython?
 
 To demonstrate the usefulness of Cython, we'll start with an atypical usage
-pattern: In the `Jupyter `notebook, we will use the `cythonmagic` extension, to
+pattern: In the `Jupyter `notebook, we will use the `cython` extension, to
 demonstrate why and how to use cython.
 
 Later, we will also look at how to use cython in the context of modules and
-libraries. But for now, let's load the cythonmagic extension. This allows us to
+libraries. But for now, let's load the cython extension. This allows us to
 mark cells as Cython cells by starting them with `%%cython` magic.
 
 ~~~
-%load_ext cythonmagic
+%load_ext cython
 ~~~
 {: .python}
 
