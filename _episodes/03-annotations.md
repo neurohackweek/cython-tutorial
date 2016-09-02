@@ -93,7 +93,7 @@ fast_increment_sequence. However, you can now independently call it from Python
 (in which case, it will be slow).
 
 
->  ## Compling c extensions from c code.
+> ## Compling c extensions from c code.
 > This is useful if you want to use legacy C code. Consider the following toy
 > example. Let's say you had the following C code (in fact.h):
 >
