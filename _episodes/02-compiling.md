@@ -1,16 +1,18 @@
 ---
 title: "Compiling Cython code"
-teaching: 5
+teaching: 15
 exercises: 5
 questions:
 - "How do we compile Cython code in a typical project?"
+- "How do we create Cython objects with no Python overhead"
 objectives:
 - "Use the `setup.py` file to compile Cython code"
 - "Use the pyximport to compile on the fly"
-- ""
+- "Write cpdef functions with typed memoryviews"
 keypoints:
-- ""
-- ""
+- "Cython uses the pyx extension and distutils to compile code to C"
+- "Another simpler mechanism is provided by `pyximport`"
+- "Additional performance gains can be won by using cdef and cpdef objects"
 ---
 
 ### `pyx` is for Cython

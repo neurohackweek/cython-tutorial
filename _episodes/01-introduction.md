@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
 teaching: 15
-exercises: 0
+exercises: 5
 questions:
 - "Why use Cython?"
 - "How do you install Cython?"
