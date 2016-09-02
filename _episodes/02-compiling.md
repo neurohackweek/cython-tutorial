@@ -6,7 +6,8 @@ questions:
 - "How do we compile Cython code in a typical project?"
 objectives:
 - "Use the `setup.py` file to compile Cython code"
--
+- "Use the pyximport to compile on the fly"
+- ""
 keypoints:
 - ""
 - ""
@@ -146,21 +147,23 @@ very good.
 Alternatively, defining these objects with `cpdef` will create both the
 Cython-available and the Python-available versions of a function or class. Not
 as simple, because the inputs now need to be something that python knows how to
-produce (array pointers are not one of those...). This gives you the advantage
-of
+produce (array pointers are not one of those...). Instead, here we use [typed memory views](http://cython.readthedocs.io/en/latest/src/userguide/memoryviews.html).
+This is a 'view' onto the memory occupied by a numpy array from within the C
+side of things. This makes things go really fast, because instead of passing in
+the array, you are passing in a view into the memory.
 
 ~~~
-   cpdef float distance(float[:] x, float[:] y):  # Defined as typed memory views
-       cdef int i
-       cdef int n = x.shape[0]
-       cdef float d = 0.0
-       for i in range(n):
-	    d += (x[i] - y[i]) ** 2
-       return d
+ cpdef float distance(double[:] x, double[:] y):  
+     cdef int i
+     cdef int n = x.shape[0]
+     cdef float d = 0.0
+     for i in range(n):
+         d += (x[i] - y[i]) ** 2
+     return d
 ~~~
 
-Finally, make sure that you are not writing Cythong code that you could easily
+Finally, make sure that you are not writing Cython code that you could easily
 get from somewhere else. If it's a basic operation that many people might use,
 it's probably already been implemented (and it's probably better implemented
 than you would implement it, see
-[`scipy.spatial.distances.cdist`](http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cdist.html))
+[`scipy.spatial.distances.cdist`](http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cdist.html)).
