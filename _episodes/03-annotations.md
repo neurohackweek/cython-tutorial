@@ -72,7 +72,7 @@ there is less Python-related overhead in that one. Cython can compile the
 fast_increment function without needing to do things like Python type-checking,
 etc.
 
-In this case, we may as well use cpdef:
+In this case, we may as well use `cpdef`:
 
 ~~~
 cpdef int increment_either(int num, int offset):
@@ -91,7 +91,6 @@ def fast_increment_sequence(seq, offset):
 The function increment_either is only fast when called by
 fast_increment_sequence. However, you can now independently call it from Python
 (in which case, it will be slow).
-
 
 > ## Compling c extensions from c code.
 > This is useful if you want to use legacy C code. Consider the following toy
