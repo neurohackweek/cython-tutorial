@@ -124,7 +124,7 @@ the Fibonacci series.
 def fib(n):
     a, b = 1, 1
     for i in range(n):
-        a, b = a+b, a
+        a, b = a + b, a
 
     return a
 ~~~
@@ -140,7 +140,7 @@ def fibx(int n):
     cdef int i, a, b
     a, b = 1, 1
     for i in range(n):
-        a, b = a+b, a
+        a, b = a + b, a
     return a
 ~~~
 {: .python}
@@ -170,7 +170,6 @@ int fib(int n){
 ~~~
 {: .code}
 
-
 In and of itself, that's not too terrible, but can get unpleasant if you write
 more than this trivial function. The main issue is that integrating this code
 into a python program is not trivial and requires writing extension code (think
@@ -183,9 +182,10 @@ functions in your Python code.
 >
 > Recursive functions are functions that call themselves during their
 > execution. Another interesting property of the Fibonacci series is that it
-> can be written as a recursive function.
+> can be written as a recursive function. That's because each item depends on
+> the values of other items (namely item n-1 and item n-2)
 >
-> Rewrite the fib function to use recursion. Is it faster than the
+> Rewrite the `fib` function using recursion. Is it faster than the
 > non-recursive version? Does Cythonizing it give even more of an advantage?
 >
 {: .challenge}
@@ -229,7 +229,7 @@ def fib_pure_python(n):
                    i=cython.int)
     a, b = 1, 1
     for i in range(n):
-        a, b = a+b, a
+        a, b = a + b, a
     return a
 ~~~
 {: .python}
