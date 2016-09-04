@@ -152,7 +152,9 @@ as simple, because the inputs now need to be something that python knows how to
 produce (array pointers are not one of those...). Instead, here we use [typed memory views](http://cython.readthedocs.io/en/latest/src/userguide/memoryviews.html).
 This is a 'view' onto the memory occupied by a numpy array from within the C
 side of things. This makes things go really fast, because instead of passing in
-the array, you are passing in a view into the memory.
+the array, you are passing in a view into the memory (see also
+[this blog post](https://jakevdp.github.io/blog/2012/08/08/memoryview-benchmarks/)
+for much more details on this).
 
 ~~~
  cpdef float distance(double[:] x, double[:] y):  

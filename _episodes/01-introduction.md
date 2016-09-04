@@ -190,6 +190,23 @@ functions in your Python code.
 >
 {: .challenge}
 
+
+> ## Speeding up recursion
+> Here is a version of the Fibonacci series written using recursion:
+>
+>    def fib_r(n):
+>         if n <= 1:
+>              return n
+>         else:
+>              return fib_r(n-1) + fib_r(n-2)
+>
+> Is it better
+> Well, it turns out that recursion looks clever, but works much worse.
+> Even worse for this case, Cythonizing the recursed version of Fibonacci
+
+{: .solution}
+
+
 ### Writing Cython that also works as Python
 
 One of the major challenges in using Cython is that it requires compiling the
