@@ -200,9 +200,10 @@ functions in your Python code.
 >         else:
 >              return fib_r(n-1) + fib_r(n-2)
 >
-> Is it better
-> Well, it turns out that recursion looks clever, but works much worse.
-> Even worse for this case, Cythonizing the recursed version of Fibonacci
+> Is it better? Well, it turns out that recursion looks clever, but works much
+> worse (why is that?). Even worse for this case, Cythonizing the recursed
+> version of Fibonacci doesn't do much for us either. Why do you think that is?
+> Later, we'll see how we can diagnose these situations.
 {: .solution}
 
 
