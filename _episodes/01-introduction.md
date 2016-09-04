@@ -203,7 +203,6 @@ functions in your Python code.
 > Is it better
 > Well, it turns out that recursion looks clever, but works much worse.
 > Even worse for this case, Cythonizing the recursed version of Fibonacci
-
 {: .solution}
 
 
