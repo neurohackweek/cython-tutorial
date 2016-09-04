@@ -194,11 +194,11 @@ functions in your Python code.
 > ## Speeding up recursion
 > Here is a version of the Fibonacci series written using recursion:
 >
->    def fib_r(n):
+>     def fib_r(n):
 >         if n <= 1:
->              return n
+>             return n
 >         else:
->              return fib_r(n-1) + fib_r(n-2)
+>             return fib_r(n-1) + fib_r(n-2)
 >
 > Is it better? Well, it turns out that recursion looks clever, but works much
 > worse (why is that?). Even worse for this case, Cythonizing the recursed
