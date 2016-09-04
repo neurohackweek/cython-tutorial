@@ -1,7 +1,7 @@
 ---
 title: "Using annotations to improve performance even more"
 teaching: 15
-exercises: 5
+exercises: 0
 questions:
 - "How do we diagnose performance bottlenecks?"
 - "How can we improve these bottlenecks even more?"

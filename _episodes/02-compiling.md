@@ -1,7 +1,7 @@
 ---
 title: "Compiling Cython code"
-teaching: 15
-exercises: 5
+teaching: 10
+exercises: 0
 questions:
 - "How do we compile Cython code in a typical project?"
 - "How do we create Cython objects with no Python overhead"

@@ -1,7 +1,7 @@
 ---
 title: "Numba"
-teaching: 5
-exercises: 0
+teaching: 10
+exercises: 5
 questions:
 - "What other options do we have to speed up Python code?"
 objectives:

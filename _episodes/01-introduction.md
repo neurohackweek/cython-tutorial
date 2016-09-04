@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-teaching: 15
+teaching: 10
 exercises: 5
 questions:
 - "Why use Cython?"
